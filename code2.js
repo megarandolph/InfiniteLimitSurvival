@@ -36,6 +36,9 @@ gdjs.PosadaCode.GDQuestionMarkObjects3= [];
 gdjs.PosadaCode.GDWarningObjects1= [];
 gdjs.PosadaCode.GDWarningObjects2= [];
 gdjs.PosadaCode.GDWarningObjects3= [];
+gdjs.PosadaCode.GDLeaderBoardObjects1= [];
+gdjs.PosadaCode.GDLeaderBoardObjects2= [];
+gdjs.PosadaCode.GDLeaderBoardObjects3= [];
 gdjs.PosadaCode.GDTransitionObjects1= [];
 gdjs.PosadaCode.GDTransitionObjects2= [];
 gdjs.PosadaCode.GDTransitionObjects3= [];
@@ -256,6 +259,27 @@ gdjs.PosadaCode.eventsList1(runtimeScene);} //End of subevents
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("LeaderBoard"), gdjs.PosadaCode.GDLeaderBoardObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.PosadaCode.GDLeaderBoardObjects1.length;i<l;++i) {
+    if ( gdjs.PosadaCode.GDLeaderBoardObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.PosadaCode.GDLeaderBoardObjects1[k] = gdjs.PosadaCode.GDLeaderBoardObjects1[i];
+        ++k;
+    }
+}
+gdjs.PosadaCode.GDLeaderBoardObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Leaderboard", false);
+}}
+
+}
+
+
+{
+
 gdjs.copyArray(runtimeScene.getObjects("Jugar"), gdjs.PosadaCode.GDJugarObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Nombre"), gdjs.PosadaCode.GDNombreObjects1);
 
@@ -368,6 +392,9 @@ gdjs.PosadaCode.GDQuestionMarkObjects3.length = 0;
 gdjs.PosadaCode.GDWarningObjects1.length = 0;
 gdjs.PosadaCode.GDWarningObjects2.length = 0;
 gdjs.PosadaCode.GDWarningObjects3.length = 0;
+gdjs.PosadaCode.GDLeaderBoardObjects1.length = 0;
+gdjs.PosadaCode.GDLeaderBoardObjects2.length = 0;
+gdjs.PosadaCode.GDLeaderBoardObjects3.length = 0;
 gdjs.PosadaCode.GDTransitionObjects1.length = 0;
 gdjs.PosadaCode.GDTransitionObjects2.length = 0;
 gdjs.PosadaCode.GDTransitionObjects3.length = 0;
