@@ -30,6 +30,12 @@ gdjs.PosadaCode.GDNombreObjects3= [];
 gdjs.PosadaCode.GDMosaicoArmaObjects1= [];
 gdjs.PosadaCode.GDMosaicoArmaObjects2= [];
 gdjs.PosadaCode.GDMosaicoArmaObjects3= [];
+gdjs.PosadaCode.GDQuestionMarkObjects1= [];
+gdjs.PosadaCode.GDQuestionMarkObjects2= [];
+gdjs.PosadaCode.GDQuestionMarkObjects3= [];
+gdjs.PosadaCode.GDWarningObjects1= [];
+gdjs.PosadaCode.GDWarningObjects2= [];
+gdjs.PosadaCode.GDWarningObjects3= [];
 gdjs.PosadaCode.GDTransitionObjects1= [];
 gdjs.PosadaCode.GDTransitionObjects2= [];
 gdjs.PosadaCode.GDTransitionObjects3= [];
@@ -38,10 +44,102 @@ gdjs.PosadaCode.GDDarkenObjects2= [];
 gdjs.PosadaCode.GDDarkenObjects3= [];
 
 
-gdjs.PosadaCode.mapOfGDgdjs_9546PosadaCode_9546GDGunObjects2Objects = Hashtable.newFrom({"Gun": gdjs.PosadaCode.GDGunObjects2});
+gdjs.PosadaCode.eventsList0 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(1)) == "0");
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Nombre"), gdjs.PosadaCode.GDNombreObjects1);
+{for(var i = 0, len = gdjs.PosadaCode.GDNombreObjects1.length ;i < len;++i) {
+    gdjs.PosadaCode.GDNombreObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
+}
+}}
+
+}
+
+
+};gdjs.PosadaCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(0), false, false);
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Warning"), gdjs.PosadaCode.GDWarningObjects2);
+{for(var i = 0, len = gdjs.PosadaCode.GDWarningObjects2.length ;i < len;++i) {
+    gdjs.PosadaCode.GDWarningObjects2[i].setBBText("Obten un arma para poder entrar al coliseo");
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Nombre"), gdjs.PosadaCode.GDNombreObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.PosadaCode.GDNombreObjects2.length;i<l;++i) {
+    if ( gdjs.PosadaCode.GDNombreObjects2[i].getBehavior("Text").getText() == "" ) {
+        isConditionTrue_0 = true;
+        gdjs.PosadaCode.GDNombreObjects2[k] = gdjs.PosadaCode.GDNombreObjects2[i];
+        ++k;
+    }
+}
+gdjs.PosadaCode.GDNombreObjects2.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(0), false, false);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Warning"), gdjs.PosadaCode.GDWarningObjects2);
+{for(var i = 0, len = gdjs.PosadaCode.GDWarningObjects2.length ;i < len;++i) {
+    gdjs.PosadaCode.GDWarningObjects2[i].setBBText(gdjs.PosadaCode.GDWarningObjects2[i].getBBText() + (" y registrate en la posada para entrar al coliseo"));
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Nombre"), gdjs.PosadaCode.GDNombreObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.PosadaCode.GDNombreObjects1.length;i<l;++i) {
+    if ( gdjs.PosadaCode.GDNombreObjects1[i].getBehavior("Text").getText() == "" ) {
+        isConditionTrue_0 = true;
+        gdjs.PosadaCode.GDNombreObjects1[k] = gdjs.PosadaCode.GDNombreObjects1[i];
+        ++k;
+    }
+}
+gdjs.PosadaCode.GDNombreObjects1.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(0), true, false);
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("Warning"), gdjs.PosadaCode.GDWarningObjects1);
+{for(var i = 0, len = gdjs.PosadaCode.GDWarningObjects1.length ;i < len;++i) {
+    gdjs.PosadaCode.GDWarningObjects1[i].setBBText("Registrate en la posada para entrar al coliseo");
+}
+}}
+
+}
+
+
+};gdjs.PosadaCode.mapOfGDgdjs_9546PosadaCode_9546GDGunObjects2Objects = Hashtable.newFrom({"Gun": gdjs.PosadaCode.GDGunObjects2});
 gdjs.PosadaCode.mapOfGDgdjs_9546PosadaCode_9546GDShotgunObjects2Objects = Hashtable.newFrom({"Shotgun": gdjs.PosadaCode.GDShotgunObjects2});
 gdjs.PosadaCode.mapOfGDgdjs_9546PosadaCode_9546GDGatlingGunObjects1Objects = Hashtable.newFrom({"GatlingGun": gdjs.PosadaCode.GDGatlingGunObjects1});
-gdjs.PosadaCode.eventsList0 = function(runtimeScene) {
+gdjs.PosadaCode.eventsList2 = function(runtimeScene) {
 
 {
 
@@ -91,7 +189,7 @@ gdjs.PosadaCode.GDGatlingGunObjects1.length = 0;
 }
 
 
-};gdjs.PosadaCode.eventsList1 = function(runtimeScene) {
+};gdjs.PosadaCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -100,15 +198,11 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(1)) == "0");
+{gdjs.evtTools.sound.playMusic(runtimeScene, "assets\\🍺 Música de TABERNA Medieval _ Música ambiental de fantasía.wav", true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("Nombre"), gdjs.PosadaCode.GDNombreObjects1);
-{for(var i = 0, len = gdjs.PosadaCode.GDNombreObjects1.length ;i < len;++i) {
-    gdjs.PosadaCode.GDNombreObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
+{ //Subevents
+gdjs.PosadaCode.eventsList0(runtimeScene);} //End of subevents
 }
-}}
 
 }
 
@@ -133,6 +227,29 @@ if (isConditionTrue_0) {
 }{runtimeScene.getScene().getVariables().getFromIndex(1).setNumber(0);
 }{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0);
 }}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Jugar"), gdjs.PosadaCode.GDJugarObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.PosadaCode.GDJugarObjects1.length;i<l;++i) {
+    if ( gdjs.PosadaCode.GDJugarObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.PosadaCode.GDJugarObjects1[k] = gdjs.PosadaCode.GDJugarObjects1[i];
+        ++k;
+    }
+}
+gdjs.PosadaCode.GDJugarObjects1.length = k;
+if (isConditionTrue_0) {
+
+{ //Subevents
+gdjs.PosadaCode.eventsList1(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -195,12 +312,16 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(0), false, false);
 }
 if (isConditionTrue_0) {
-{runtimeScene.getScene().getVariables().getFromIndex(0).setBoolean(true);
+gdjs.copyArray(runtimeScene.getObjects("QuestionMark"), gdjs.PosadaCode.GDQuestionMarkObjects1);
+{for(var i = 0, len = gdjs.PosadaCode.GDQuestionMarkObjects1.length ;i < len;++i) {
+    gdjs.PosadaCode.GDQuestionMarkObjects1[i].deleteFromScene(runtimeScene);
+}
+}{runtimeScene.getScene().getVariables().getFromIndex(0).setBoolean(true);
 }{runtimeScene.getScene().getVariables().getFromIndex(1).setNumber(gdjs.randomInRange(1, 3));
 }{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber());
 }
 { //Subevents
-gdjs.PosadaCode.eventsList0(runtimeScene);} //End of subevents
+gdjs.PosadaCode.eventsList2(runtimeScene);} //End of subevents
 }
 
 }
@@ -241,6 +362,12 @@ gdjs.PosadaCode.GDNombreObjects3.length = 0;
 gdjs.PosadaCode.GDMosaicoArmaObjects1.length = 0;
 gdjs.PosadaCode.GDMosaicoArmaObjects2.length = 0;
 gdjs.PosadaCode.GDMosaicoArmaObjects3.length = 0;
+gdjs.PosadaCode.GDQuestionMarkObjects1.length = 0;
+gdjs.PosadaCode.GDQuestionMarkObjects2.length = 0;
+gdjs.PosadaCode.GDQuestionMarkObjects3.length = 0;
+gdjs.PosadaCode.GDWarningObjects1.length = 0;
+gdjs.PosadaCode.GDWarningObjects2.length = 0;
+gdjs.PosadaCode.GDWarningObjects3.length = 0;
 gdjs.PosadaCode.GDTransitionObjects1.length = 0;
 gdjs.PosadaCode.GDTransitionObjects2.length = 0;
 gdjs.PosadaCode.GDTransitionObjects3.length = 0;
@@ -248,7 +375,7 @@ gdjs.PosadaCode.GDDarkenObjects1.length = 0;
 gdjs.PosadaCode.GDDarkenObjects2.length = 0;
 gdjs.PosadaCode.GDDarkenObjects3.length = 0;
 
-gdjs.PosadaCode.eventsList1(runtimeScene);
+gdjs.PosadaCode.eventsList3(runtimeScene);
 
 return;
 
