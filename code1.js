@@ -826,7 +826,7 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Enemy Spawn");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Wave");
-}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }}
 
 }
@@ -1970,7 +1970,7 @@ gdjs.copyArray(gdjs.GameCode.GDPixelHeartBarObjects2_1final, gdjs.GameCode.GDPix
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("StatsResume"), gdjs.GameCode.GDStatsResumeObjects2);
 {gdjs.evtTools.runtimeScene.setTimeScale(runtimeScene, 0);
-}{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 1);
+}{gdjs.evtTools.sound.stopSoundOnChannel(runtimeScene, 1);
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "GameOver");
 }{for(var i = 0, len = gdjs.GameCode.GDStatsResumeObjects2.length ;i < len;++i) {
     gdjs.GameCode.GDStatsResumeObjects2[i].getBehavior("Text").setText("Poder: " + runtimeScene.getScene().getVariables().getFromIndex(0).getChild("Power").getAsString() + "\nCadencia: " + runtimeScene.getScene().getVariables().getFromIndex(0).getChild("FireRate").getAsString() + "\nPresicion: " + runtimeScene.getScene().getVariables().getFromIndex(0).getChild("Accuracy").getAsString() + "\nVelocidad: " + runtimeScene.getScene().getVariables().getFromIndex(0).getChild("Speed").getAsString() + "\nVida: " + runtimeScene.getScene().getVariables().getFromIndex(0).getChild("Lives").getAsString());
