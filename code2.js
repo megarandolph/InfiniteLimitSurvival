@@ -198,7 +198,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\🍺 Música de TABERNA Medieval _ Música ambiental de fantasía.mp3", 2, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
+{gdjs.evtTools.sound.playSound(runtimeScene, "assets\\🍺 Música de TABERNA Medieval _ Música ambiental de fantasía.mp3", true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }
 { //Subevents
 gdjs.PosadaCode.eventsList0(runtimeScene);} //End of subevents
@@ -222,8 +222,7 @@ for (var i = 0, k = 0, l = gdjs.PosadaCode.GDVolverObjects1.length;i<l;++i) {
 }
 gdjs.PosadaCode.GDVolverObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 2);
-}{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MainMenu", false);
 }{runtimeScene.getScene().getVariables().getFromIndex(0).setBoolean(false);
 }{runtimeScene.getScene().getVariables().getFromIndex(1).setNumber(0);
 }{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(0);
@@ -287,8 +286,7 @@ gdjs.PosadaCode.GDNombreObjects1.length = k;
 }
 if (isConditionTrue_0) {
 /* Reuse gdjs.PosadaCode.GDNombreObjects1 */
-{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, 2);
-}{runtimeScene.getGame().getVariables().getFromIndex(1).setString((( gdjs.PosadaCode.GDNombreObjects1.length === 0 ) ? "" :gdjs.PosadaCode.GDNombreObjects1[0].getText()));
+{runtimeScene.getGame().getVariables().getFromIndex(1).setString((( gdjs.PosadaCode.GDNombreObjects1.length === 0 ) ? "" :gdjs.PosadaCode.GDNombreObjects1[0].getText()));
 }{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Game", false);
 }}
 

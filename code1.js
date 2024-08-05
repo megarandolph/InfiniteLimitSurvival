@@ -351,7 +351,6 @@ gdjs.copyArray(runtimeScene.getObjects("vignette"), gdjs.GameCode.GDvignetteObje
 }{for(var i = 0, len = gdjs.GameCode.GDNombreAventureroObjects1.length ;i < len;++i) {
     gdjs.GameCode.GDNombreAventureroObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
 }
-}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }
 { //Subevents
 gdjs.GameCode.eventsList0(runtimeScene);} //End of subevents
@@ -827,6 +826,7 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Enemy Spawn");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Wave");
+}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }}
 
 }
