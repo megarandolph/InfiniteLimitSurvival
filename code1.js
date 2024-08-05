@@ -327,7 +327,8 @@ gdjs.copyArray(runtimeScene.getObjects("SpiderSpawnPoints"), gdjs.GameCode.GDSpi
 gdjs.copyArray(runtimeScene.getObjects("Transition"), gdjs.GameCode.GDTransitionObjects1);
 gdjs.copyArray(runtimeScene.getObjects("WallCollision"), gdjs.GameCode.GDWallCollisionObjects1);
 gdjs.copyArray(runtimeScene.getObjects("vignette"), gdjs.GameCode.GDvignetteObjects1);
-{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 1, "", 0);
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
+}{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 1, "", 0);
 }{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 1, "Vignette", 0);
 }{gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.GameCode.GDFloorObjects1.length !== 0 ? gdjs.GameCode.GDFloorObjects1[0] : null), true, "", 0);
 }{gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.GameCode.GDvignetteObjects1.length !== 0 ? gdjs.GameCode.GDvignetteObjects1[0] : null), true, "Vignette", 0);
@@ -351,7 +352,6 @@ gdjs.copyArray(runtimeScene.getObjects("vignette"), gdjs.GameCode.GDvignetteObje
 }{for(var i = 0, len = gdjs.GameCode.GDNombreAventureroObjects1.length ;i < len;++i) {
     gdjs.GameCode.GDNombreAventureroObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
 }
-}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.wav", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }
 { //Subevents
 gdjs.GameCode.eventsList0(runtimeScene);} //End of subevents

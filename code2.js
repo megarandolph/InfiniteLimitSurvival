@@ -198,7 +198,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusic(runtimeScene, "assets\\🍺 Música de TABERNA Medieval _ Música ambiental de fantasía.wav", true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
+{gdjs.evtTools.sound.playMusic(runtimeScene, "assets\\🍺 Música de TABERNA Medieval _ Música ambiental de fantasía.mp3", true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }
 { //Subevents
 gdjs.PosadaCode.eventsList0(runtimeScene);} //End of subevents
