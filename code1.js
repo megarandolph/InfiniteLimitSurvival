@@ -327,8 +327,7 @@ gdjs.copyArray(runtimeScene.getObjects("SpiderSpawnPoints"), gdjs.GameCode.GDSpi
 gdjs.copyArray(runtimeScene.getObjects("Transition"), gdjs.GameCode.GDTransitionObjects1);
 gdjs.copyArray(runtimeScene.getObjects("WallCollision"), gdjs.GameCode.GDWallCollisionObjects1);
 gdjs.copyArray(runtimeScene.getObjects("vignette"), gdjs.GameCode.GDvignetteObjects1);
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
-}{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 1, "", 0);
+{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 1, "", 0);
 }{gdjs.evtTools.camera.setCameraZoom(runtimeScene, 1, "Vignette", 0);
 }{gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.GameCode.GDFloorObjects1.length !== 0 ? gdjs.GameCode.GDFloorObjects1[0] : null), true, "", 0);
 }{gdjs.evtTools.camera.centerCamera(runtimeScene, (gdjs.GameCode.GDvignetteObjects1.length !== 0 ? gdjs.GameCode.GDvignetteObjects1[0] : null), true, "Vignette", 0);
@@ -352,6 +351,7 @@ gdjs.copyArray(runtimeScene.getObjects("vignette"), gdjs.GameCode.GDvignetteObje
 }{for(var i = 0, len = gdjs.GameCode.GDNombreAventureroObjects1.length ;i < len;++i) {
     gdjs.GameCode.GDNombreAventureroObjects1[i].getBehavior("Text").setText(runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
 }
+}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }
 { //Subevents
 gdjs.GameCode.eventsList0(runtimeScene);} //End of subevents
@@ -483,7 +483,7 @@ gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDShadowObjects3Objects = Hashtable.n
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDDropObjects3Objects = Hashtable.newFrom({"Drop": gdjs.GameCode.GDDropObjects3});
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDSpiderEnemyObjects4Objects = Hashtable.newFrom({"SpiderEnemy": gdjs.GameCode.GDSpiderEnemyObjects4});
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDHealthBar_95959595EnemyObjects4Objects = Hashtable.newFrom({"HealthBar_Enemy": gdjs.GameCode.GDHealthBar_9595EnemyObjects4});
-gdjs.GameCode.asyncCallback11599492 = function (runtimeScene, asyncObjectsList) {
+gdjs.GameCode.asyncCallback20288508 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("SpiderSpawnPoints"), gdjs.GameCode.GDSpiderSpawnPointsObjects4);
 
@@ -512,7 +512,7 @@ gdjs.GameCode.eventsList5 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.GameCode.localVariables);
 for (const obj of gdjs.GameCode.GDSpiderSpawnPointsObjects3) asyncObjectsList.addObject("SpiderSpawnPoints", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback11599492(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback20288508(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -2417,6 +2417,10 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Pause")
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "LevelUp"));
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "GameOver"));
+}
 }
 }
 if (isConditionTrue_0) {
