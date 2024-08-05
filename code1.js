@@ -359,9 +359,10 @@ gdjs.GameCode.eventsList0(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDGhostEnemyObjects1Objects = Hashtable.newFrom({"GhostEnemy": gdjs.GameCode.GDGhostEnemyObjects1});
-gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDSpiderEnemyObjects1Objects = Hashtable.newFrom({"SpiderEnemy": gdjs.GameCode.GDSpiderEnemyObjects1});
-gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDImpEnemyObjects1Objects = Hashtable.newFrom({"ImpEnemy": gdjs.GameCode.GDImpEnemyObjects1});
+};gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDGhostEnemyObjects2Objects = Hashtable.newFrom({"GhostEnemy": gdjs.GameCode.GDGhostEnemyObjects2});
+gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDSpiderEnemyObjects2Objects = Hashtable.newFrom({"SpiderEnemy": gdjs.GameCode.GDSpiderEnemyObjects2});
+gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDImpEnemyObjects2Objects = Hashtable.newFrom({"ImpEnemy": gdjs.GameCode.GDImpEnemyObjects2});
+gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDColiseoObjects1Objects = Hashtable.newFrom({"Coliseo": gdjs.GameCode.GDColiseoObjects1});
 gdjs.GameCode.eventsList2 = function(runtimeScene) {
 
 {
@@ -369,47 +370,66 @@ gdjs.GameCode.eventsList2 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 {
-gdjs.copyArray(runtimeScene.getObjects("Bullet"), gdjs.GameCode.GDBulletObjects1);
-gdjs.copyArray(runtimeScene.getObjects("GatlingGun"), gdjs.GameCode.GDGatlingGunObjects1);
-gdjs.copyArray(runtimeScene.getObjects("GhostEnemy"), gdjs.GameCode.GDGhostEnemyObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.GameCode.GDGunObjects1);
-gdjs.copyArray(runtimeScene.getObjects("ImpEnemy"), gdjs.GameCode.GDImpEnemyObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.GameCode.GDPlayerObjects1);
-gdjs.copyArray(runtimeScene.getObjects("Shotgun"), gdjs.GameCode.GDShotgunObjects1);
-gdjs.copyArray(runtimeScene.getObjects("SpiderEnemy"), gdjs.GameCode.GDSpiderEnemyObjects1);
-{for(var i = 0, len = gdjs.GameCode.GDPlayerObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDPlayerObjects1[i].setZOrder((gdjs.GameCode.GDPlayerObjects1[i].getPointY("")));
+gdjs.copyArray(runtimeScene.getObjects("Bullet"), gdjs.GameCode.GDBulletObjects2);
+gdjs.copyArray(runtimeScene.getObjects("GatlingGun"), gdjs.GameCode.GDGatlingGunObjects2);
+gdjs.copyArray(runtimeScene.getObjects("GhostEnemy"), gdjs.GameCode.GDGhostEnemyObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Gun"), gdjs.GameCode.GDGunObjects2);
+gdjs.copyArray(runtimeScene.getObjects("ImpEnemy"), gdjs.GameCode.GDImpEnemyObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.GameCode.GDPlayerObjects2);
+gdjs.copyArray(runtimeScene.getObjects("Shotgun"), gdjs.GameCode.GDShotgunObjects2);
+gdjs.copyArray(runtimeScene.getObjects("SpiderEnemy"), gdjs.GameCode.GDSpiderEnemyObjects2);
+{for(var i = 0, len = gdjs.GameCode.GDPlayerObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDPlayerObjects2[i].setZOrder((gdjs.GameCode.GDPlayerObjects2[i].getPointY("")));
 }
-for(var i = 0, len = gdjs.GameCode.GDBulletObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDBulletObjects1[i].setZOrder((gdjs.GameCode.GDBulletObjects1[i].getPointY("")));
+for(var i = 0, len = gdjs.GameCode.GDBulletObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDBulletObjects2[i].setZOrder((gdjs.GameCode.GDBulletObjects2[i].getPointY("")));
 }
-for(var i = 0, len = gdjs.GameCode.GDGhostEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDGhostEnemyObjects1[i].setZOrder((gdjs.GameCode.GDGhostEnemyObjects1[i].getPointY("")));
+for(var i = 0, len = gdjs.GameCode.GDGhostEnemyObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDGhostEnemyObjects2[i].setZOrder((gdjs.GameCode.GDGhostEnemyObjects2[i].getPointY("")));
 }
-for(var i = 0, len = gdjs.GameCode.GDSpiderEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDSpiderEnemyObjects1[i].setZOrder((gdjs.GameCode.GDSpiderEnemyObjects1[i].getPointY("")));
+for(var i = 0, len = gdjs.GameCode.GDSpiderEnemyObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDSpiderEnemyObjects2[i].setZOrder((gdjs.GameCode.GDSpiderEnemyObjects2[i].getPointY("")));
 }
-for(var i = 0, len = gdjs.GameCode.GDImpEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDImpEnemyObjects1[i].setZOrder((gdjs.GameCode.GDImpEnemyObjects1[i].getPointY("")));
+for(var i = 0, len = gdjs.GameCode.GDImpEnemyObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDImpEnemyObjects2[i].setZOrder((gdjs.GameCode.GDImpEnemyObjects2[i].getPointY("")));
 }
-}{for(var i = 0, len = gdjs.GameCode.GDGunObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDGunObjects1[i].setZOrder((( gdjs.GameCode.GDPlayerObjects1.length === 0 ) ? 0 :gdjs.GameCode.GDPlayerObjects1[0].getZOrder()) + 1);
+}{for(var i = 0, len = gdjs.GameCode.GDGunObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDGunObjects2[i].setZOrder((( gdjs.GameCode.GDPlayerObjects2.length === 0 ) ? 0 :gdjs.GameCode.GDPlayerObjects2[0].getZOrder()) + 1);
 }
-for(var i = 0, len = gdjs.GameCode.GDGatlingGunObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDGatlingGunObjects1[i].setZOrder((( gdjs.GameCode.GDPlayerObjects1.length === 0 ) ? 0 :gdjs.GameCode.GDPlayerObjects1[0].getZOrder()) + 1);
+for(var i = 0, len = gdjs.GameCode.GDGatlingGunObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDGatlingGunObjects2[i].setZOrder((( gdjs.GameCode.GDPlayerObjects2.length === 0 ) ? 0 :gdjs.GameCode.GDPlayerObjects2[0].getZOrder()) + 1);
 }
-for(var i = 0, len = gdjs.GameCode.GDShotgunObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDShotgunObjects1[i].setZOrder((( gdjs.GameCode.GDPlayerObjects1.length === 0 ) ? 0 :gdjs.GameCode.GDPlayerObjects1[0].getZOrder()) + 1);
+for(var i = 0, len = gdjs.GameCode.GDShotgunObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDShotgunObjects2[i].setZOrder((( gdjs.GameCode.GDPlayerObjects2.length === 0 ) ? 0 :gdjs.GameCode.GDPlayerObjects2[0].getZOrder()) + 1);
 }
-}{for(var i = 0, len = gdjs.GameCode.GDGhostEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDGhostEnemyObjects1[i].separateFromObjectsList(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDGhostEnemyObjects1Objects, false);
+}{for(var i = 0, len = gdjs.GameCode.GDGhostEnemyObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDGhostEnemyObjects2[i].separateFromObjectsList(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDGhostEnemyObjects2Objects, false);
 }
-for(var i = 0, len = gdjs.GameCode.GDSpiderEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDSpiderEnemyObjects1[i].separateFromObjectsList(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDSpiderEnemyObjects1Objects, false);
+for(var i = 0, len = gdjs.GameCode.GDSpiderEnemyObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDSpiderEnemyObjects2[i].separateFromObjectsList(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDSpiderEnemyObjects2Objects, false);
 }
-for(var i = 0, len = gdjs.GameCode.GDImpEnemyObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDImpEnemyObjects1[i].separateFromObjectsList(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDImpEnemyObjects1Objects, false);
+for(var i = 0, len = gdjs.GameCode.GDImpEnemyObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDImpEnemyObjects2[i].separateFromObjectsList(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDImpEnemyObjects2Objects, false);
 }
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Coliseo"), gdjs.GameCode.GDColiseoObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDColiseoObjects1Objects, runtimeScene, true, false);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableBoolean(runtimeScene.getScene().getVariables().getFromIndex(8), false, false);
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
+}{runtimeScene.getScene().getVariables().getFromIndex(8).setBoolean(true);
 }}
 
 }
@@ -826,7 +846,6 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Enemy Spawn");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "Wave");
-}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\Coliseum Soundtrack + Ambient Crowd Cheering.mp3", 1, true, runtimeScene.getGame().getVariables().getFromIndex(0).getChild("Music").getAsNumber(), 1);
 }}
 
 }
