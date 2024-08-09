@@ -45,7 +45,7 @@ gdjs.LeaderboardCode.GDDarkenObjects3= [];
 
 gdjs.LeaderboardCode.eventsList0 = function(runtimeScene) {
 
-};gdjs.LeaderboardCode.userFunc0x9f7048 = function GDJSInlineCode(runtimeScene) {
+};gdjs.LeaderboardCode.userFunc0x8afca0 = function GDJSInlineCode(runtimeScene) {
 "use strict";
 async function obtenerDatosDeFirebase(){
     const ref = firebase.database().ref('/clasificaciones')
@@ -176,7 +176,7 @@ for(var i = 0, len = gdjs.LeaderboardCode.GDTiempoTextObjects3.length ;i < len;+
 {
 
 
-gdjs.LeaderboardCode.userFunc0x9f7048(runtimeScene);
+gdjs.LeaderboardCode.userFunc0x8afca0(runtimeScene);
 
 }
 

@@ -1,41 +1,55 @@
 
-if (typeof gdjs.evtsExt__CameraShake__SetFrequency !== "undefined") {
-  gdjs.evtsExt__CameraShake__SetFrequency.registeredGdjsCallbacks.forEach(callback =>
+if (typeof gdjs.evtsExt__Flash__ColorTint !== "undefined") {
+  gdjs.evtsExt__Flash__ColorTint.registeredGdjsCallbacks.forEach(callback =>
     gdjs._unregisterCallback(callback)
   );
 }
 
-gdjs.evtsExt__CameraShake__SetFrequency = {};
+gdjs.evtsExt__Flash__ColorTint = {};
+gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1= [];
 
 
-gdjs.evtsExt__CameraShake__SetFrequency.userFunc0xfed0e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Flash__ColorTint.userFunc0xcab6c8 = function GDJSInlineCode(runtimeScene, objects, eventsFunctionContext) {
 "use strict";
-const name = eventsFunctionContext.getArgument("Name");
-
-gdjs._cameraShakeExtension.noiseManager.getGenerator(name).frequency = eventsFunctionContext.getArgument("Frequency");
+/** @type {gdjs.SpriteRuntimeObject} */
+const tintedObject = objects[0];
+const tint = tintedObject.getColor();
+eventsFunctionContext.returnValue = tint;
 };
-gdjs.evtsExt__CameraShake__SetFrequency.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Flash__ColorTint.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__CameraShake__SetFrequency.userFunc0xfed0e0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+
+}
+
+
+{
+
+gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1);
+
+var objects = [];
+objects.push.apply(objects,gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1);
+gdjs.evtsExt__Flash__ColorTint.userFunc0xcab6c8(runtimeScene, objects, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
 
 };
 
-gdjs.evtsExt__CameraShake__SetFrequency.func = function(runtimeScene, Frequency, Name, parentEventsFunctionContext) {
+gdjs.evtsExt__Flash__ColorTint.func = function(runtimeScene, Object, parentEventsFunctionContext) {
 var eventsFunctionContext = {
   _objectsMap: {
+"Object": Object
 },
   _objectArraysMap: {
+"Object": gdjs.objectsListsToArray(Object)
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("CameraShake"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("CameraShake"),
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("Flash"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("Flash"),
   localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
@@ -74,17 +88,16 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
     return runtimeScene.getLayer(layerName);
   },
   getArgument: function(argName) {
-if (argName === "Frequency") return Frequency;
-if (argName === "Name") return Name;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
+gdjs.evtsExt__Flash__ColorTint.GDObjectObjects1.length = 0;
 
-gdjs.evtsExt__CameraShake__SetFrequency.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Flash__ColorTint.eventsList0(runtimeScene, eventsFunctionContext);
 
-return;
+return "" + eventsFunctionContext.returnValue;
 }
 
-gdjs.evtsExt__CameraShake__SetFrequency.registeredGdjsCallbacks = [];
+gdjs.evtsExt__Flash__ColorTint.registeredGdjsCallbacks = [];
